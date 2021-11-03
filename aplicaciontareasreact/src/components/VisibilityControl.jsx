@@ -1,6 +1,6 @@
 import React from "react";
 
-function VisibilityControl({ isChecked, funcionEjm }) {
+function VisibilityControl({ isChecked, setIsChecked }) {
   return (
     <div className="form-check d-flex justify-content-center">
       <input
@@ -8,7 +8,7 @@ function VisibilityControl({ isChecked, funcionEjm }) {
         className="form-check-input mx-2"
         checked={isChecked}
         onChange={(e) => {
-          funcionEjm(e.target.checked);
+          setIsChecked(e.target.checked);
         }}
       />
       <label htmlFor="form-check-label"> Mostrar Tareas Hechas</label>

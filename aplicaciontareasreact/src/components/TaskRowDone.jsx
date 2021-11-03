@@ -1,6 +1,6 @@
 import React from "react";
 
-function TaskRow({ taskItems, toggleTask }) {
+function TaskRowDone({ taskItems, toggleTask }) {
   return (
     <div className="container-fluid">
       <table className="table table-success table-striped table-bordered">
@@ -12,7 +12,7 @@ function TaskRow({ taskItems, toggleTask }) {
         </thead>
         <tbody>
           {taskItems
-            .filter((task) => task.done === false)
+            .filter((task) => task.done === true)
             .map((task, index) => (
               <tr key={index}>
                 <td>{task.name}</td>
@@ -31,4 +31,4 @@ function TaskRow({ taskItems, toggleTask }) {
   );
 }
 
-export default TaskRow;
+export default TaskRowDone;
